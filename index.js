@@ -84,6 +84,6 @@ app.get("/team",(req,res) =>{
 // });
 
 //listening to requests
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("Now listening for requests")
 })
