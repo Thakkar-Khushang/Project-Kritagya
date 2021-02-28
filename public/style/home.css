@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+  }
+  
+  .welcome{
+  text-align: center;
+  padding: 30px;
+  font-family: 'Bree Serif', serif;
+  font-size: 50px;
+  background-color: aliceblue;
+  }
+  
+  p{
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .services{
+    text-align: center;
+    padding: 30px;
+    font-family: 'Bree Serif', serif;
+    font-size: 50px;
+    color:white;
+    background-image: url('https://media-exp1.licdn.com/dms/image/C4D1BAQFGZRBDZbldqA/company-background_10000/0/1581452811949?e=2159024400&v=beta&t=OcbdstpLI1B5tJuZK7vrFvG_-fdcNmXf-2DnLTIA0rc');
+
+   
+    }
+    .card{
+      text-align: center;
+    }
+    .card-text{
+      color: black;
+    }
+     
+    .food-items{
+      text-align: center;
+      padding: 30px;
+      font-family: 'Bree Serif', serif;
+      font-size: 50px;
+      background-color: aliceblue;
+      }
+  
+      .card-text-menu{
+        color: rgb(241, 19, 19);
+      }
+
+      .card-img-top{
+        background-color: rgba(255, 255, 255, 0);
+      }
+
+      h1{
+          color: black;
+      }
+      ul a:hover{
+        color: #ffffff !important;
+        }
+        nav li{
+          text-align: center;
+          text-transform: uppercase;
+        }
+        li > a:after{
+          content: '';
+          display: block;
+          height: 1.5px;
+          background: #861a1a;
+          transform: scaleX(0);
+          transition: transform .3s;
+        }
+        li > a:hover:after{
+          transform: scaleX(1);
+          transition: transform .3s;
+        }

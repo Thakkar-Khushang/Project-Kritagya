@@ -10,19 +10,25 @@ const UserSchema = new Schema({
     },
     email: {
         type:String,
-        required:[true,'Email field is required']
+        required:[true,'Email field is required'],
+        unique:true
     },
     phoneNumber: {
         type:String,
         required:[true,'phoneNumber field is required'],
+        unique:true
     },
     city:{
         type:String,
         required:[true,'city field is required']
     },
-    available:{
-        type: Boolean,
-        default:false
+    password1:{
+        type:String,
+        required:[true,'Password field is required']
+    },
+    confirmPassword:{
+        type:String,
+        required:[true,'Confirm Password field is required']
     }
 });
 

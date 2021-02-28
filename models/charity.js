@@ -24,16 +24,13 @@ const CharitySchema = new Schema({
         type:String,
         required:[true,'city field is required']
     },
-    map_url: {
+    password1:{
         type:String,
-        default:"Map Location not available"
+        required:[true,'Password field is required']
     },
-    img_url:{
-        type:String
-    },
-    available:{
-        type: Boolean,
-        default:false
+    confirmPassword:{
+        type:String,
+        required:[true,'Confirm Password field is required']
     }
 });
 

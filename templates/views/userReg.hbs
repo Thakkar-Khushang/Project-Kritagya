@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritagya</title>
+    {{>cssLink}}
+    
+</head>
+<body>
+    {{>navbar}}
+    <div id="login-box">
+        <div class="left">
+          <h1>Sign up</h1>
+          <form action="/api/users" method="POST">
+            <div class="form-group">
+                                <label for="name"></label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input type="text" name="email" class="form-control" id="email" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber"></label>
+                                <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="city"></label>
+                                <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                            </div>
+                             <div class="form-group">
+                                <label for="password1"></label>
+                                <input type="password" name="password1" class="form-control" id="password1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword"></label>
+                                <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" placeholder="Confirm password">
+                                <p style="color:red">{{alert}}</p>
+                            </div>
+                            <left>
+                                <input type="submit" class="signup_submit" value="Sign me up" />
+                            </left>
+          </form>
+        </div>
+        
+        <div class="right">
+          <span class="loginwith">Sign in with<br />social network</span>
+          
+          <button class="social-signin facebook">Log in with facebook</button>
+          <button class="social-signin twitter">Log in with Twitter</button>
+          <button class="social-signin google">Log in with Google+</button>
+        </div>
+        <div class="or">OR</div>
+      </div>
+</body>
+</html>

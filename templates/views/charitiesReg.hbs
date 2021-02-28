@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritagya</title>
+    {{>cssLink}}
+</head>
+<body>
+    {{>navbar}}
+    <div id="login-box2">
+        <div class="left">
+          <h1>Sign up</h1>
+          <form action ="/api/charities" method="POST">
+                            <div class="form-group">
+                                <label for="name"></label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input type="text" name="email" class="form-control" id="email" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="description"></label>
+                                <input type="text" name="description" class="form-control" id="description" placeholder="Description">
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber"></label>
+                                <input type="text" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="city"></label>
+                                <input type="text" name="city" class="form-control" id="city" placeholder="City">
+                            </div>
+                             <div class="form-group">
+                                <label for="password1"></label>
+                                <input type="password" name="password1" class="form-control" id="password1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword"></label>
+                                <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" placeholder=" Confirm Password">
+                                <p style="color:red">{{alert}}</p>
+                            </div>
+                            <left>
+                                <input type="submit" class="signup_submit" value="Sign up" />
+                            </left>
+                        </form>
+               
+        </div>
+        
+        <div class="right">
+
+          <img src="https://i.pinimg.com/564x/ff/20/08/ff2008467d05ab77bcfb071450a8bd59.jpg" height=250px width=250px>
+        </div>
+       
+      </div>
+</body>
+</html>

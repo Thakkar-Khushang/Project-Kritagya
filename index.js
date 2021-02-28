@@ -1,37 +1,63 @@
 require('dotenv').config()
 
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const app = express();
+const hbs = require('hbs');
+require("./Database/server");
 
-//connect to MongoDB
-mongoose.connect('mongodb+srv://starkritter:WO22bEGpsWzLN2dW@cluster0.jzmkj.mongodb.net/Kritagya?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify : false
-}).then(()=>{
-    console.log('Connected to Database')
-})
-.catch((err)=>{
-    console.error('Error occured connecting to Database. \n${err}');
-})
-//mongoose.Promise = global.Promise;
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+app.set("view options", "hbs");
+app.use(express.static(path.join(__dirname, '/public')));
+app.set("views", "templates/views");
+hbs.registerPartials("templates/partials");
 
 app.use(bodyParser.json());
 
 //initialize routes
 app.use('/api',require('./routes/api'));
 
-//error handling middleware
-app.use(function(err,req,res,next){
-    //console.log(err)
-    res.status(422).send({error:err._message});
+app.get('/', (req,res) => {
+    res.render("home.hbs");
 });
 
+app.get("/users/register",(req,res) =>{
+    res.render("userReg.hbs");
+})
+
+app.get("/signin",(req,res) =>{
+    res.render("sign-in.hbs");
+})
+
+app.get("/signup",(req,res) =>{
+    res.render("sign-up.hbs");
+})
+
+app.get("/users/login",(req,res) =>{
+    res.render("userLogin.hbs");
+})
+
+app.get("/charities/register",(req,res) =>{
+    res.render("charitiesReg.hbs");
+})
+
+app.get("/charities/display",(req,res) =>{
+    res.render("charityList.hbs");
+})
+
+
+//error handling middleware
+// app.use(function(err,req,res,next){
+//     //console.log(err)
+//     res.status(422).send({error:err._message});
+// });
+
 //listening to requests
-app.listen(process.env.PORT || 4000, function(){
+app.listen(3000, function(){
     console.log("Now listening for requests")
 })
