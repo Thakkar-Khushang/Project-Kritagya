@@ -19,7 +19,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js -e js,hbs"
+    "startgi": "nodemon index.js -e js,hbs"
   },
   "repository": {
     "type": "git",
