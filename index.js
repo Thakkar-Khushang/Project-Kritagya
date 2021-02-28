@@ -46,9 +46,11 @@ app.get("/charities/register",(req,res) =>{
     res.render("charitiesReg.hbs");
 })
 
-app.get("/charities/display",(req,res) =>{
-    res.render("charityList.hbs");
+app.get("/charities/display/chennai",(req,res) =>{
+    res.render("charitiesListChennai.hbs");
 })
+
+
 
 
 //error handling middleware
