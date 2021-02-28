@@ -1,1 +1,1 @@
-web: node ./app.js -e js,hbs
+web: node ./index.js -e js,hbs
