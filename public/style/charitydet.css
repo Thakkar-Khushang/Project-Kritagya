@@ -1,0 +1,27 @@
+.quantity {
+    width: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.quantity input {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+
+#info-content {
+    font-size: 4px;
+    height: 20px;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}

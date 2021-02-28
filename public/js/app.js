@@ -6,15 +6,15 @@ const imgSlider = document.getElementById('img-slider');
 imgSlider.addEventListener('click', event => {
 
     if (event.target === Nomos1) {
-         BigImage.setAttribute ("src","images/Nomos1.webp");
+         BigImage.setAttribute ("src","/Image/cfhctwo.jpg");
     }
 
     else if (event.target === Nomos2) {
-        BigImage.setAttribute ("src","images/Nomos2.webp");
+        BigImage.setAttribute ("src","/Image/chfcthree.jpg");
     }
 
     else {
-    BigImage.setAttribute ("src","images/Nomos3.webp");
+    BigImage.setAttribute ("src","/Image/cfhcfour.jpg");
     }
   
 });

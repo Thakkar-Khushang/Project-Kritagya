@@ -1,0 +1,19 @@
+ul a:hover{
+    color: #ffffff !important;
+    }
+nav li{
+      text-align: center;
+      text-transform: uppercase;
+    }
+li > a:after{
+      content: '';
+      display: block;
+      height: 1.5px;
+      background: #861a1a;
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+li > a:hover:after{
+      transform: scaleX(1);
+      transition: transform .3s;
+    }

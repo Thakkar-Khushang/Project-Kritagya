@@ -39,17 +39,41 @@ app.get("/signup",(req,res) =>{
 })
 
 app.get("/users/login",(req,res) =>{
-    res.render("userLogin.hbs");
+    res.render("sign-inUser.hbs");
 })
 
 app.get("/charities/register",(req,res) =>{
     res.render("charitiesReg.hbs");
 })
 
-app.get("/charities/display/chennai",(req,res) =>{
-    res.render("charitiesListChennai.hbs");
+app.get("/charities/login",(req,res) =>{
+    res.render("sign-inCharities.hbs");
 })
 
+app.get("/charities/display/chennai",(req,res) =>{
+    res.render("charityList.hbs");
+})
+
+app.get("/ch1",(req,res) =>{
+    res.render("Charity1.hbs");
+})
+
+app.get("/ch2",(req,res) =>{
+    res.render("Charity2.hbs");
+})
+
+app.get("/charities/pay",(req,res) =>{
+    amt = req.query.amt;
+    res.render("payment.hbs",{"amount":amt});
+})
+
+app.get("/stores",(req,res) =>{
+    res.render("stores.hbs");
+})
+
+app.get("/team",(req,res) =>{
+    res.render("team.hbs");
+})
 
 
 

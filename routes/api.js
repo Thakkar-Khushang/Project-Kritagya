@@ -65,7 +65,7 @@ router.get('/users/login', function(req, res, next){
                 res.send("Invalid Login")
             }
         }else{
-            res.render("sign-in.hbs",{"alert":"Invalid Email or Password"})
+            res.render("sign-inUser.hbs",{"alert":"Invalid Email or Password"})
         }
     });
 });
