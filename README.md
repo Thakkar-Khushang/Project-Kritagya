@@ -5,8 +5,11 @@ Among us Hack Project
 ## Website Link:
 # https://kritagya.azurewebsites.net/
 
-## SRS
+## SRS:
 # https://docs.google.com/document/d/13dldGk2eckC7R_MTNZwZR9WUnYfa0yyTwM1D1RE3JIs/edit#
+
+## Explanation:
+# https://drive.google.com/file/d/1DwjZLwWcnc89tpFzTUf_iJM5wjaRrKw_/view?usp=sharing
 
 ## Social Media publicity methods:
 # Uploaded these on stories and statuses
